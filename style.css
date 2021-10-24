@@ -3,26 +3,26 @@
 }
 
 #left-s {
-    width: 1in;
-    height: 3.025in;
+    width: 1.3in;
+    height:4.025in;
     display: inline-block;
 }
 
 #star {
-    width: 1.2in;
-    height: 3.025in;
+    width: 1.6in;
+    height: 4.025in;
     display: inline-block;
     margin-left: .1in;
 }
 
 .standard {
-    width: .7in;
-    height: 1.5in;
+    width: .9in;
+    height: 2in;
 }
 
 .right-side {
     width: 1in;
-    height: 1.5in;
+    height: 2in;
 }
 
 .key {
@@ -43,6 +43,7 @@
 
 .row > * {
     display: inline-block;
+    margin: 0 0 0 0;
 }
 
 .row {
@@ -50,10 +51,10 @@
 }
 
 .right-row {
-    margin-left: .1in;
+    margin-left: 0;
 }
 
 #vowels {
     margin-top: .2in;
-    margin-left: 2.8in;    
+    margin-left: 3.5in;    
 }

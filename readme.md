@@ -1,4 +1,4 @@
-# touch-steno
+# touch-steno (WIP)
 touch-steno emulates steno keyboards on multi-touch screens. Use it to see if you like steno at no extra cost (if you already own a tablet/laptop with touchscreen/etc).
 
 ## Setup

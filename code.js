@@ -42,8 +42,12 @@ window.onload = (e) => {
     for (let key of keys) {
         key.ontouchstart = (e) => {
             update_background(e);
+            console.log(e);
         };
-        key.ontouchmove = update_background;
-        key.ontouchend = (e) => {};
+        key.ontouchmove = (e) => {
+            update_background(e);
+            console.log(e);
+        };    
+        key.ontouchend = (e) => { console.log(e); };
     }
 };

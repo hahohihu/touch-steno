@@ -1,0 +1,59 @@
+* {
+    padding: 0 0 0 0;
+}
+
+#left-s {
+    width: 1in;
+    height: 3.025in;
+    display: inline-block;
+}
+
+#star {
+    width: 1.2in;
+    height: 3.025in;
+    display: inline-block;
+    margin-left: .1in;
+}
+
+.standard {
+    width: .7in;
+    height: 1.5in;
+}
+
+.right-side {
+    width: 1in;
+    height: 1.5in;
+}
+
+.key {
+    border: 1px solid black;
+    background-color: white;
+}
+
+.col {
+    display: inline-block;
+    margin-left: .1in;
+    margin-right: 0;
+}
+
+.right-col {
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+.row > * {
+    display: inline-block;
+}
+
+.row {
+    display: inline-block;
+}
+
+.right-row {
+    margin-left: .1in;
+}
+
+#vowels {
+    margin-top: .2in;
+    margin-left: 2.8in;    
+}

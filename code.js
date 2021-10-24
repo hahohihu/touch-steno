@@ -56,12 +56,10 @@ window.onload = (e) => {
     for (let key of keys) {
         key.ontouchstart = (e) => {
             update_background(e);
-            document.getElementById("text").innerText += (key_translations[e.target.id]);
         };
         key.ontouchmove = (e) => {};    
         key.ontouchend = (e) => { 
             update_background(e);
-            document.getElementById("text").innerText += (key_translations[e.target.id]);
         };
     }
 };

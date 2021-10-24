@@ -6,33 +6,47 @@ function toggleFullScreen() {
     var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
   
     if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
-      requestFullScreen.call(docEl);
+        requestFullScreen.call(docEl);
     }
     else {
-      cancelFullScreen.call(doc);
+        cancelFullScreen.call(doc);
     }
-  }
+}
 
 function update_background(ev) {
-// Change background color based on the number simultaneous touches
-// in the event's targetTouches list:
-//   yellow - one tap (or hold)
-//   pink - two taps
-//   lightblue - more than two taps
-switch (ev.targetTouches.length) {
-    case 1:
-    // Single tap`
-    ev.target.style.background = "yellow";
-    break;
-    case 2:
-    // Two simultaneous touches
-    ev.target.style.background = "pink";
-    break;
-    default:
-    // More than two simultaneous touches
-    ev.target.style.background = "lightblue";
+    switch (ev.targetTouches.length) {
+        case 1:
+            ev.target.style.background = "grey";
+            break;
+        default:
+            ev.target.style.background = "white";
+    }
 }
-}
+
+let key_translations = {
+    "left-s": "q",
+    "left-t": "w",
+    "left-k": "s",
+    "left-w": "d",
+    "left-p": "e",
+    "left-h": "r",
+    "left-r": "f",
+    "star": "t",
+    "right-f": "u",
+    "right-r": "j",
+    "right-p": "i",
+    "right-b": "k",
+    "right-l": "o",
+    "right-g": "l",
+    "right-t": "p",
+    "right-s": ";",
+    "right-d": "[",
+    "right-z": "'",
+    "a": "c",
+    "o": "v",
+    "e": "n",
+    "u": "m",
+};
 
 window.onload = (e) => {
     document.getElementById("goFS").onclick = (e) => {
@@ -42,12 +56,12 @@ window.onload = (e) => {
     for (let key of keys) {
         key.ontouchstart = (e) => {
             update_background(e);
-            console.log(e);
+            document.getElementById("text").innerText += (key_translations[e.target.id]);
         };
-        key.ontouchmove = (e) => {
+        key.ontouchmove = (e) => {};    
+        key.ontouchend = (e) => { 
             update_background(e);
-            console.log(e);
-        };    
-        key.ontouchend = (e) => { console.log(e); };
+            document.getElementById("text").innerText += (key_translations[e.target.id]);
+        };
     }
 };
